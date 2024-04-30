@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { useEffect, useState } from 'react';
 import { MdOutlineRestartAlt } from "react-icons/md";
 import { quiz } from '../data.js';
