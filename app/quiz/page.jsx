@@ -69,7 +69,6 @@ const page = () => {
 
     useEffect(() => {
       if (!document.fullscreenElement) {
-        alert("Quiz-a-Mania not allows you to continue without FullScreen Mode");
         window.location.href = "/";
       }
     }, []);
@@ -88,7 +87,13 @@ const page = () => {
       var count = 0;
       window.addEventListener("visibilitychange", function (event) {
         count += 0.5;
-        setAlert(`Warning , ${count}/10 don't change the tab/browser during quiz attempt `)
+        if(count >= 10){
+          alert(`You had reached maximum limit of changing your screen `)
+          window.location.href = "/";
+        }
+        else{
+          setAlert(`Warning , ${count}/10 don't change the tab/browser during quiz attempt `)
+        }
       });
     }, [])
 
