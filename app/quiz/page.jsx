@@ -69,6 +69,7 @@ const page = () => {
 
     useEffect(() => {
       if (!document.fullscreenElement) {
+        alert("Full Screen Mode not enable");
         window.location.href = "/";
       }
     }, []);
@@ -87,11 +88,11 @@ const page = () => {
       var count = 0;
       window.addEventListener("visibilitychange", function (event) {
         count += 0.5;
-        if(count >= 10){
+        if (count >= 10) {
           alert(`You had reached maximum limit of changing your screen `)
           window.location.href = "/";
         }
-        else{
+        else {
           setAlert(`Warning , ${count}/10 don't change the tab/browser during quiz attempt `)
         }
       });

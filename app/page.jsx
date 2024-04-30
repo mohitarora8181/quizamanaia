@@ -11,7 +11,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          duration: 2,
+          duration: 1,
           ease: "easeInOut"
         }}
         key={0}
