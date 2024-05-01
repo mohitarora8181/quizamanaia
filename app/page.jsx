@@ -32,14 +32,15 @@ export default function Home() {
             } else if (ele.msRequestFullscreen) { /* IE11 */
               ele.msRequestFullscreen();
             }
-            document.getElementById("link").click();
+            setTimeout(() => {
+              document.getElementById("link").click();
+            }, 200);
           }}
           id="toggle" className="border w-full h-full cursor-pointer px-32 text-white py-2 whitespace-nowrap text-xl rounded-full border-white bg-[#152042] shadow-lg shadow-blue-500/50 hover:bg-white hover:shadow-black transition-all ease-in-out duration-700 hover:text-black">
           Start Quiz
         </p>
-        <Link href={"quiz"} id="link"></Link>
       </motion.button>
-
+      <Link href={"quiz"} id="link"></Link>
     </main>
   );
 }
