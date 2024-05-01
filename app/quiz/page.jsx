@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { MdOutlineRestartAlt } from "react-icons/md";
 import { quiz } from '../data.js';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const page = () => {
@@ -69,15 +68,7 @@ const page = () => {
 
     useEffect(() => {
       if (!document.fullscreenElement) {
-        alert("Full Screen Mode not enable");
-        var ele = document.documentElement;
-            if (ele.requestFullscreen) {
-              document.documentElement.requestFullscreen();
-            } else if (ele.webkitRequestFullscreen) { /* Safari */
-              ele.webkitRequestFullscreen();
-            } else if (ele.msRequestFullscreen) { /* IE11 */
-              ele.msRequestFullscreen();
-            }
+        // window.location.href = "/";
       }
     }, []);
 
@@ -108,7 +99,6 @@ const page = () => {
 
     return (
       <>
-        <ToastContainer />
         <a href="/" className={`text-white pl-5 mt-5 w-full ${showResult ? "hidden" : "block"}`}>Close</a>
         <div className='container' id='container'>
           <h1>Quiz Page</h1>
