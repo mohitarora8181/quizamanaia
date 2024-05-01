@@ -68,7 +68,7 @@ const page = () => {
 
     useEffect(() => {
       if (!document.fullscreenElement) {
-        // window.location.href = "/";
+        window.location.href = "/";
       }
     }, []);
 
