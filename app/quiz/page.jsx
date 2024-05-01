@@ -70,7 +70,14 @@ const page = () => {
     useEffect(() => {
       if (!document.fullscreenElement) {
         alert("Full Screen Mode not enable");
-        window.location.href = "/";
+        var ele = document.documentElement;
+            if (ele.requestFullscreen) {
+              document.documentElement.requestFullscreen();
+            } else if (ele.webkitRequestFullscreen) { /* Safari */
+              ele.webkitRequestFullscreen();
+            } else if (ele.msRequestFullscreen) { /* IE11 */
+              ele.msRequestFullscreen();
+            }
       }
     }, []);
 
